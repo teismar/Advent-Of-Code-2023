@@ -5,7 +5,8 @@ github: https://github.com/teismar
 date: 2023-12-01
 """
 
-def file_to_list(filename : str) -> list:
+
+def file_to_list(filename: str) -> list:
     """
     Read the file and return a list of the strings of each line.
     :param filename:
@@ -16,7 +17,8 @@ def file_to_list(filename : str) -> list:
     content = [x.strip() for x in content]
     return content
 
-def calculate_calibration_value(input_string : str) -> int:
+
+def calculate_calibration_value(input_string: str) -> int:
     """
     Calculate the calibration value of the input string.
     So search for the first and last occurence of an integer and concatenate them.
@@ -51,7 +53,9 @@ def main():
     calibration_value = 0
     for line in input_list:
         calibration_value += calculate_calibration_value(line)
-    print(calibration_value)
+
+    print("The calibration value is: " + str(calibration_value))
+
 
 if __name__ == "__main__":
     main()
