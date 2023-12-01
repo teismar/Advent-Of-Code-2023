@@ -1,3 +1,10 @@
+"""
+This is the solution for the second trebuchet problem of Advent of Code 2023 day 1.
+author: Tim Eismar
+github: https://github.com/teismar
+date: 2023-12-01
+"""
+
 from partOne_trebuchet import file_to_list, calculate_calibration_value
 
 

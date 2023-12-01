@@ -1,5 +1,5 @@
 """
-This is the soltuion for the first trebuchet problem of Advent of Code 2023 day 1.
+This is the solution for the first trebuchet problem of Advent of Code 2023 day 1.
 author: Tim Eismar
 github: https://github.com/teismar
 date: 2023-12-01
