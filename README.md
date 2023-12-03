@@ -9,4 +9,4 @@
 | [Day 3](https://adventofcode.com/2023/day/3) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
 
-**Days without using a python package:** 2/2
+**Days without using a python package:** 3/3
