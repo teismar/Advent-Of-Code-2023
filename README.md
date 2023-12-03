@@ -8,4 +8,4 @@
 | [Day 2](https://adventofcode.com/2023/day/2) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
 
-**Days without using a python library:** 2/2
+**Days without using a python package:** 2/2
