@@ -30,6 +30,13 @@ def list_of_strings_to_list_of_lists(list_of_strings: list) -> list:
     return list_of_lists
 
 def is_adjacent_to_symbol(list_of_lists, row, col):
+    """
+    Check if the character at the given row and column is adjacent to a symbol.
+    :param list_of_lists:
+    :param row:
+    :param col:
+    :return:
+    """
     # Directions to check: (row_change, col_change)
     directions = [(-1, -1), (-1, 0), (-1, 1),  # Up Left, Up, Up Right
                   (0, -1), (0, 1),            # Left, Right
@@ -49,6 +56,11 @@ def is_adjacent_to_symbol(list_of_lists, row, col):
 
 
 def find_valid_numbers(list_of_lists: list) -> int:
+    """
+    Find all valid numbers in the list of lists.
+    :param list_of_lists:
+    :return:
+    """
     sum_of_partnumbers = 0
 
     # Iterate over the list of lists
