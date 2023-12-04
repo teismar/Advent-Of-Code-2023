@@ -6,7 +6,6 @@ date: 2023-12-04
 """
 
 from partOne_Scratch import file_to_list
-import sys
 
 
 def game_to_points(game: str) -> int:
