@@ -28,7 +28,7 @@ def is_adjacent_to_symbol(list_of_lists, row, col) -> (bool, tuple):
         # Check if new_row and new_col are within the bounds of the list
         if 0 <= new_row < len(list_of_lists) and 0 <= new_col < len(list_of_lists[0]):
             adjacent_char = list_of_lists[new_row][new_col]
-            # Check if the adjacent character is a symbol (not a digit and not a '.')
+            # Check if the adjacent character is a '*'
             if adjacent_char == "*":
                 # Return True and the coordinates of the adjacent symbol
                 return True, (new_row, new_col)
