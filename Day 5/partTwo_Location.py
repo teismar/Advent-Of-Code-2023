@@ -131,7 +131,6 @@ def main():
     """
     # Start Time
     import time
-    start_time = time.time()
     # Read the maps and get a list of the lines
     maps = file_to_list('maps.txt')
     splitted_maps = input_list_to_list_of_lists(maps)
@@ -159,11 +158,6 @@ def main():
         loc = "No seeds found."
 
     # Print the result
-    took = time.time() - start_time
-    print(f"Took {took} seconds to run.")
-    print(f"Thats {took / 60} minutes.")
-    print(f"Thats {took / 60 / 60} hours.")
-
     print(f'The lowest location is {loc}')
 
 
