@@ -11,4 +11,4 @@
 | [Day 5](https://adventofcode.com/2023/day/5) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
 
-**Days without using a python package:** 4/4
+**Days without using a python package:** 5/5
