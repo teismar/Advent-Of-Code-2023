@@ -12,4 +12,4 @@
 | [Day 6](https://adventofcode.com/2023/day/6) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
 
-**Days without using a python package:** 6/6
+**Days without using a python package:** 7/7
