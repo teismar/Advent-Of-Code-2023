@@ -14,4 +14,7 @@
 | [Day 8](https://adventofcode.com/2023/day/8) | ⭐ |   |
 <!--- advent_readme_stars table --->
 
-**Days without using a python package:** 7/7
+**Days without using a python package:** 9/9
+
+## Important Note
+We don't talk about the mess of Day 8 Part 2. It's a mess, and I'm not proud of it. I'm not even sure if it works for all inputs. I'm just glad it's over.
