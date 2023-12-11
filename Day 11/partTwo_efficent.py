@@ -7,7 +7,9 @@ date: 2023-12-11
 
 from partOne_galaxy import file_to_list, number_galaxies
 
-def shortest_path(galaxy_one: int, galaxy_two: int, data: list, cache: dict, empty_rows: list, empty_cols: list) -> (int, dict):
+
+def shortest_path(galaxy_one: int, galaxy_two: int, data: list, cache: dict, empty_rows: list, empty_cols: list) -> (
+int, dict):
     """
     Find the shortest path between two galaxies.
     :param galaxy_one:
@@ -27,28 +29,32 @@ def shortest_path(galaxy_one: int, galaxy_two: int, data: list, cache: dict, emp
             for j, cell in enumerate(row):
                 if cell == galaxy_one and not coords_one:
                     coords_one = (i, j)
+                    new_x = coords_one[0]
+                    for xval in empty_rows:
+                        if coords_one[0] > xval:
+                            new_x += 1000000 - 1
+                    new_y = coords_one[1]
+                    for yval in empty_cols:
+                        if coords_one[1] > yval:
+                            new_y += 1000000 - 1
+                    coords_one = (new_x, new_y)
                     cache[galaxy_one] = coords_one
+
                 if cell == galaxy_two and not coords_two:
                     coords_two = (i, j)
-
-    coords = [coords_one, coords_two]
-
-    # Extend the coordinates
-    for i, coord in enumerate(coords):
-        new_x = coord[0]
-        for xval in empty_rows:
-            if coord[0] > xval:
-                new_x += 1000000 -1
-        new_y = coord[1]
-        for yval in empty_cols:
-            if coord[1] > yval:
-                new_y += 1000000 -1
-        coords[i] = (new_x, new_y)
-
-    coords_one, coords_two = coords
-
+                    new_x = coords_two[0]
+                    for xval in empty_rows:
+                        if coords_two[0] > xval:
+                            new_x += 1000000 - 1
+                    new_y = coords_two[1]
+                    for yval in empty_cols:
+                        if coords_two[1] > yval:
+                            new_y += 1000000 - 1
+                    coords_two = (new_x, new_y)
+                    cache[galaxy_two] = coords_two
 
     return abs(coords_one[0] - coords_two[0]) + abs(coords_one[1] - coords_two[1]), cache
+
 
 def all_shortest_paths(data: list, galaxies: int, empty_rows: list, empty_cols: list) -> int:
     """
@@ -75,6 +81,7 @@ def all_shortest_paths(data: list, galaxies: int, empty_rows: list, empty_cols: 
 
     return sum(shortest_paths)
 
+
 def extend_data(data: list, times: int) -> (list, list):
     """
     Make List of coordinates for each extension.
@@ -88,12 +95,10 @@ def extend_data(data: list, times: int) -> (list, list):
     col_count = len(data[0])
 
     # Identify empty rows and columns
-    empty_rows = [i for i, row in enumerate(data)if all(cell == "." for cell in row)]
+    empty_rows = [i for i, row in enumerate(data) if all(cell == "." for cell in row)]
     empty_cols = [j for j in range(col_count) if all(data[i][j] == "." for i in range(row_count))]
 
     return empty_rows, empty_cols
-
-
 
 def main():
     content = file_to_list("datasheet.txt")
