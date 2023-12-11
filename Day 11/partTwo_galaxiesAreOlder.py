@@ -5,7 +5,7 @@ github: https://github.com/teismar
 date: 2023-12-11
 """
 
-from partOne_galaxy import file_to_list, number_galaxies, all_shortest_paths, tqdm
+from partOne_galaxy import file_to_list, number_galaxies, all_shortest_paths
 
 def extend_data(data: list, times: int) -> list:
     """
@@ -25,13 +25,13 @@ def extend_data(data: list, times: int) -> list:
 
     # Double the size of empty rows
     for i in reversed(empty_rows):
-        for _ in tqdm(range(times-1)):
+        for _ in range(times-1):
             data.insert(i, data[i][:])
 
     # Double the size of empty columns
     for j in reversed(empty_cols):
         for row in data:
-            for _ in tqdm(range(times-1)):
+            for _ in range(times-1):
                 row.insert(j, row[j])
 
     return data

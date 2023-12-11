@@ -5,7 +5,7 @@ github: https://github.com/teismar
 date: 2023-12-11
 """
 
-from partOne_galaxy import file_to_list, number_galaxies, tqdm
+from partOne_galaxy import file_to_list, number_galaxies
 
 def shortest_path(galaxy_one: int, galaxy_two: int, data: list, cache: dict, empty_rows: list, empty_cols: list) -> (int, dict):
     """
@@ -69,7 +69,7 @@ def all_shortest_paths(data: list, galaxies: int, empty_rows: list, empty_cols: 
     # Find the shortest path between all galaxies
     shortest_paths = []
     cache = {}
-    for combination in tqdm(all_combinations):
+    for combination in all_combinations:
         s_path, cache = shortest_path(combination[0], combination[1], data, cache, empty_rows, empty_cols)
         shortest_paths.append(s_path)
 

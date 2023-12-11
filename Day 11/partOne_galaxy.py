@@ -5,8 +5,6 @@ github: https://github.com/teismar
 date: 2023-12-11
 """
 
-from tqdm import tqdm
-
 def file_to_list(filename: str) -> list:
     """
     Read the file and return a list of the strings of each line.
@@ -108,7 +106,7 @@ def all_shortest_paths(data: list, galaxies: int) -> int:
     # Find the shortest path between all galaxies
     shortest_paths = []
     cache = {}
-    for combination in tqdm(all_combinations):
+    for combination in all_combinations:
         s_path, cache = shortest_path(combination[0], combination[1], data, cache)
         shortest_paths.append(s_path)
 
